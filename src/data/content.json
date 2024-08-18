@@ -1,0 +1,100 @@
+{
+    "about": {
+        "label": "About",
+        "data": [
+            {
+                "subHeading" : "",
+                "size": 0,
+                "type": "text",
+                "data":"I’m a self motivated achiever with an ability to plan and execute, working at Societe Generale Global Solution Center as a Software Engineer. Proficient in Java, C++, Data Structures and Algorithms with intuitive problem solving skills. I’m passionate about implementing and launching new projects, with an ability to translate business requirements into technical solutions. I’m eager to join a team driven agile body who believe in growth & experiments."
+            }
+        ]
+    },
+    "education": {
+        "label": "Education",
+        "data": [
+            {
+                "subHeading" : "",
+                "size": 0,
+                "type": "text",
+                "data":"I am pursuing MS in CS in GWU"
+            }
+        ]
+    },
+    "experience": {
+        "label": "Experience",
+        "data": [
+            {
+                "subHeading" : "",
+                "size": 0,
+                "type": "text",
+                "data":"I worked in SGGSC"
+            }
+        ]
+    },
+    "project": {
+        "label": "Projects",
+        "data": [
+            {
+                "subHeading" : "",
+                "size": 0,
+                "type": "text",
+                "data":"I worked in team JEDEAI"
+            }
+        ]
+    },
+    "achievements": {
+        "label": "Achievements & Awards",
+        "data": [
+            {
+                "subHeading" : "",
+                "size": 0,
+                "type": "showcase",
+                "data": [
+                    {
+                        "name" : "Brainac Award",
+                        "organization" : "Societe Generale Global Solution Center",
+                        "trophy" : "",
+                        "year" : 2023
+                    },
+                    {
+                        "name" : "BL Special Award",
+                        "organization" : "Societe Generale Global Solution Center",
+                        "trophy" : "",
+                        "year" : 2023
+                    },
+                    {
+                        "name" : "Spot Award",
+                        "organization" : "Societe Generale Global Solution Center",
+                        "trophy" : "",
+                        "year" : 2023
+                    },
+                    {
+                        "name" : "Reply Code Challenge | Global Rank 363 | National Rank 73",
+                        "organization" : "Reply",
+                        "trophy" : "",
+                        "year" : 2021
+                    },
+                    {
+                        "name" : "HashCode | International Rank 2282 | National Rank 495",
+                        "organization" : "Google",
+                        "trophy" : "",
+                        "year" : 2021
+                    },
+                    {
+                        "name" : "DeCipher | International Rank 39",
+                        "organization" : "IEM Kolkata",
+                        "trophy" : "",
+                        "year" : 2019
+                    },
+                    {
+                        "name" : "Quicky Sudoku Quiz | National Rank 1",
+                        "organization" : "Akash Institute",
+                        "trophy" : "",
+                        "year" : 2016
+                    }
+                ]
+            }
+        ]
+    }
+}
