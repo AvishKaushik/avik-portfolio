@@ -3,11 +3,11 @@ import { Avatar } from "@mui/material";
 import profile from "../../../assets/Profile.jpeg";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
-import leetcode from "../../../../public/projects/dark/links/leetcode.png";
-import discord from "../../../../public/projects/dark/links/discord.png";
-import codeforces from "../../../../public/projects/dark/links/codeforces.png";
-import github from "../../../../public/projects/dark/links/github.png";
-import linkedin from "../../../../public/projects/dark/links/linkedin.png";
+import leetcode from "../../../../public/projects/dark/links/leetcode.svg";
+import discord from "../../../../public/projects/dark/links/discord.svg";
+import codeforces from "../../../../public/projects/dark/links/codeforces.svg";
+import github from "../../../../public/projects/dark/links/github.svg";
+import linkedin from "../../../../public/projects/dark/links/linkedin.svg";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import WorkHistoryOutlinedIcon from "@mui/icons-material/WorkHistoryOutlined";
@@ -27,10 +27,16 @@ const Info = () => {
         }}
       />
       <div>
-        <div className="name" style={{ margin: "auto", textAlign: "center", marginTop: "5%" }}>
+        <div
+          className="name"
+          style={{ margin: "auto", textAlign: "center", marginTop: "5%" }}
+        >
           Avish Kaushik
         </div>
-        <div className="title" style={{ margin: "auto", textAlign: "center", marginTop: "5%" }}>
+        <div
+          className="title"
+          style={{ margin: "auto", textAlign: "center", marginTop: "5%" }}
+        >
           Software Developer
         </div>
         <div class="separator"></div>
@@ -92,7 +98,7 @@ const Info = () => {
           </li>
         </ul>
         <div class="separator"></div>
-        <div
+        {/* <div
           style={{ margin: "auto", justifyContent: "center", display: "flex" }}
         >
           <img alt="Leetcode" src={leetcode} style={{ marginRight: 10 }}></img>
@@ -104,7 +110,71 @@ const Info = () => {
           ></img>
           <img alt="Github" src={github} style={{ marginRight: 10 }}></img>
           <img alt="LinkedIn" src={linkedin} style={{ marginRight: 10 }}></img>
-        </div>
+        </div> */}
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img
+                alt="Leetcode"
+                src={leetcode}
+                style={{
+                  marginRight: 10,
+                  width: "inherit",
+                }}
+              ></img>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img
+                alt="Discord"
+                src={discord}
+                style={{
+                  marginRight: 10,
+                  width: "inherit",
+                }}
+              ></img>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img
+                alt="CodeForces"
+                src={codeforces}
+                style={{
+                  marginRight: 10,
+                  width: "inherit",
+                }}
+              ></img>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img
+                alt="GitHub"
+                src={github}
+                style={{
+                  marginRight: 10,
+                  width: "inherit",
+                }}
+              ></img>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img
+                alt="LinkedIn"
+                src={linkedin}
+                style={{
+                  marginRight: 10,
+                  width: "inherit",
+                }}
+              ></img>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

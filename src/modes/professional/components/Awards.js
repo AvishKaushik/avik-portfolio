@@ -11,7 +11,7 @@ import blspecial from "../../../../public/projects/dark/awards/blspecial.png";
 import reply from "../../../../public/projects/dark/awards/reply.png";
 import decipher from "../../../../public/projects/dark/awards/decipher.png";
 
-const Awards = ({ awards, Trophy }) => {
+const Awards = ({ awards }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const onFlip = () => {

@@ -7,7 +7,7 @@ import Education from "./Education";
 import Projects from "./Projects";
 import Experience from "./Experience";
 
-const Display = ({ data, Trophy }) => {
+const Display = ({ data }) => {
   var vars = { GWU: GWU, VIT: VIT, SCHOOL: SCHOOL };
 
   return (
@@ -44,7 +44,7 @@ const Display = ({ data, Trophy }) => {
           return (
             <div className="showcase">
               {Array.from(subData.data).map((awards) => {
-                return <Awards awards={awards} Trophy={Trophy} />;
+                return <Awards awards={awards} />;
               })}
             </div>
           );
