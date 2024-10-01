@@ -7,7 +7,7 @@ import Education from "./Education";
 import Projects from "./Projects";
 import Experience from "./Experience";
 
-const Display = ({ data }) => {
+const Display = ({ data, selectedTheme }) => {
   var vars = { GWU: GWU, VIT: VIT, SCHOOL: SCHOOL };
 
   return (
@@ -15,7 +15,7 @@ const Display = ({ data }) => {
       {Array.from(data).map((subData) => {
         if (subData.type === "text") {
           return (
-            <div key={subData.subHeading} className="text">
+            <div key={subData.subHeading} className={"text-"+selectedTheme}>
               {subData.data}
               <div>SKILL SET</div>
               <div>SKILL SET</div>
@@ -26,7 +26,7 @@ const Display = ({ data }) => {
           return (
             <div className="list">
               {Array.from(subData.data).map((value, key) => {
-                return <Education value={value} key={key} vars={vars} />;
+                return <Education value={value} key={key} vars={vars} selectedTheme={selectedTheme} />;
               })}
             </div>
           );
@@ -35,16 +35,16 @@ const Display = ({ data }) => {
           return (
             <div className="list">
               {Array.from(subData.data).map((value, key) => {
-                return <Experience value={value} key={key} vars={vars} />;
+                return <Experience value={value} key={key} vars={vars} selectedTheme={selectedTheme} />;
               })}
             </div>
           );
         }
         if (subData.type === "showcase") {
           return (
-            <div className="showcase">
+            <div className={"showcase-"+selectedTheme}>
               {Array.from(subData.data).map((awards) => {
-                return <Awards awards={awards} />;
+                return <Awards awards={awards} selectedTheme={selectedTheme}/>;
               })}
             </div>
           );
@@ -52,7 +52,7 @@ const Display = ({ data }) => {
         if (subData.type === "project") {
           return (
             <div className="aaa">
-              <Projects projects={subData.data} />
+              <Projects projects={subData.data} selectedTheme={selectedTheme} />
             </div>
           );
         }

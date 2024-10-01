@@ -27,6 +27,7 @@
     overflow: hidden;
     border-radius: 100%;
     animation: grow 5.5s forwards;
+    width: 100%;
   }
   
   @keyframes grow {

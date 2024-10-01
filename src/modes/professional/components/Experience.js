@@ -1,6 +1,6 @@
 import React from "react";
 
-const Experience = ({ value, vars }) => {
+const Experience = ({ value, vars, selectedTheme }) => {
   return (
     <div className="sublist">
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -22,9 +22,9 @@ const Experience = ({ value, vars }) => {
             width: "100%",
           }}
         >
-          <div>{value.name}</div>
-          <div>{value.designation}</div>
-          <div>{value.from}-{value.to}</div>
+          <div className={"text-"+selectedTheme}>{value.name}</div>
+          <div className={"text-"+selectedTheme}>{value.designation}</div>
+          <div className={"text-"+selectedTheme}>{value.from}-{value.to}</div>
         </div>
         <div style={{ width: "100%", boxSizing: "border-box" }}>
           <img

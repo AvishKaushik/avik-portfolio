@@ -1,6 +1,6 @@
 import React from "react";
 
-const Education = ({ value, vars }) => {
+const Education = ({ value, vars, selectedTheme }) => {
   return (
     <div className="sublist">
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -21,11 +21,12 @@ const Education = ({ value, vars }) => {
             marginLeft: "10px",
             width: "100%",
           }}
+          
         >
-          <div>{value.name}</div>
-          <div>{value.board}</div>
-          <div>{value.grade}</div>
-          <div>{value.date}</div>
+          <div className={"text-"+selectedTheme}>{value.name}</div>
+          <div className={"text-"+selectedTheme}>{value.board}</div>
+          <div className={"text-"+selectedTheme}>{value.grade}</div>
+          <div className={"text-"+selectedTheme}>{value.date}</div>
         </div>
         <div style={{ width: "100%", boxSizing: "border-box" }}>
           <img

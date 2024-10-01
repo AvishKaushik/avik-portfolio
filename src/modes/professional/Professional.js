@@ -12,11 +12,11 @@ import { makeStyles } from "@mui/styles";
 import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
-import TerminalIcon from "@mui/icons-material/Terminal";
-import SourceIcon from "@mui/icons-material/Source";
-import { Link } from "react-router-dom";
+// import IconButton from "@mui/material/IconButton";
+// import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+// import TerminalIcon from "@mui/icons-material/Terminal";
+// import SourceIcon from "@mui/icons-material/Source";
+// import { Link } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 
@@ -96,7 +96,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 const Professional = (props) => {
   const classes = useTabStyles();
   const [theme, setTheme] = React.useState(
-    props.theme === "light" ? false : true
+    props.selectedTheme === "light" ? false : true
   );
   const [value, setValue] = React.useState("about");
   const handleChange = (event, newValue) => {
@@ -128,11 +128,11 @@ const Professional = (props) => {
           xs={12}
         >
           <AppBar
+            className={"navbar-" + props.selectedTheme}
             position="relative"
             border={"10px"}
             style={{
               width: "auto",
-              backgroundColor: "rgb(30, 30, 33)",
               borderRadius: 10,
               boxShadow: "0 4px 12px rgba(0,0,0,0.9)",
               minHeight: "10%",
@@ -142,8 +142,21 @@ const Professional = (props) => {
             }}
           >
             <Toolbar sx={{ border: "inherit" }}>
-              <span className="logo-name">AvishKaushik</span>
-              {/* <div style={{ marginRight: 520 }}>
+              <Grid
+                container
+                spacing={4}
+                sx={{
+                  height: "100%",
+                  flexGrow: "1",
+                  paddingTop: "8px",
+                }}
+              >
+                <Grid item xs={11} md={11}>
+                  <span className={"logo-name-" + props.selectedTheme}>
+                    AvishKaushik
+                  </span>
+                </Grid>
+                {/* <div style={{ marginRight: 520 }}>
                 <Link to="/professional" style={{ color: "#fff" }}>
                   <IconButton
                     size="large"
@@ -176,27 +189,31 @@ const Professional = (props) => {
                 </Link>
               </div> */}
 
-              {/* <MaterialUISwitch
-                checked={theme}
-                onChange={handleThemeChange}
-                inputProps={{ "aria-label": "controlled" }}
-              /> */}
+                <Grid item xs={1} md={1}
+                    style={{marginTop: "4px", paddingLeft: "0px"}}>
+                  <MaterialUISwitch
+                    checked={theme}
+                    onChange={handleThemeChange}
+                    inputProps={{ "aria-label": "controlled" }}
+                  />
+                </Grid>
+              </Grid>
             </Toolbar>
           </AppBar>
         </Box>
       </Grid>
       <Grid item xs={11.5} md={3}>
-        <Info />
+        <Info selectedTheme={props.selectedTheme} />
       </Grid>
       <Grid item xs={11.5} md={8.5}>
-        <div id="content">
+        <div id="content" className={"content-" + props.selectedTheme}>
           <TabContext value={value}>
             <Box
               sx={{
                 borderBottom: 1,
                 borderColor: "divider",
-                color: amber[50],
               }}
+              className={"primary-tab-" + props.selectedTheme}
             >
               <TabList
                 classes={{
@@ -208,7 +225,11 @@ const Professional = (props) => {
                 textColor="inherit"
                 variant="scrollable"
                 scrollButtons="auto"
-                TabIndicatorProps={{ sx: { backgroundColor: amber[50] } }}
+                TabIndicatorProps={
+                  props.selectedTheme === "dark"
+                    ? { sx: { backgroundColor: amber[50] } }
+                    : { sx: { backgroundColor: "#000" } }
+                }
               >
                 {Object.keys(content).map((key) => {
                   return (
@@ -224,7 +245,10 @@ const Professional = (props) => {
                   value={key}
                   sx={{ padding: 0, height: "74vh" }}
                 >
-                  <Display data={content[key].data}></Display>
+                  <Display
+                    data={content[key].data}
+                    selectedTheme={props.selectedTheme}
+                  ></Display>
                 </TabPanel>
               );
             })}

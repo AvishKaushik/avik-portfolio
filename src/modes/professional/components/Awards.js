@@ -11,7 +11,7 @@ import blspecial from "../../../../public/projects/dark/awards/blspecial.png";
 import reply from "../../../../public/projects/dark/awards/reply.png";
 import decipher from "../../../../public/projects/dark/awards/decipher.png";
 
-const Awards = ({ awards }) => {
+const Awards = ({ awards, selectedTheme }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const onFlip = () => {
@@ -30,7 +30,7 @@ const Awards = ({ awards }) => {
   };
 
   return (
-    <div className="award">
+    <div className={"award-"+selectedTheme}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="front" onClick={onFlip}>
           {/* <Canvas style={{ height: "120px" }} camera={{ position: [0, 80, 50], isPerspectiveCamera: true }}>

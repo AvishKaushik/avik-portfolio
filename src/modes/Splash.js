@@ -24,7 +24,6 @@ const darkTheme = {
     headerColor: "#0E6BA877",
   };
 
-
 const Splash = () =>  {
     const [redirect, setRedirect] = useState(false);
 

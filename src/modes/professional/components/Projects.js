@@ -8,7 +8,7 @@ import dcmt from "../../../../public/projects/dark/dcmt.png";
 import demat from "../../../../public/projects/dark/demat.png";
 import eduhub from "../../../../public/projects/dark/eduhub.png";
 import fact from "../../../../public/projects/dark/fact.png";
-import jedeai from "../../../../public/projects/dark/jedeai.png";
+// import jedeai from "../../../../public/projects/dark/jedeai.png";
 import toolkit from "../../../../public/projects/dark/toolkit.png";
 import python from "../../../../public/projects/dark/tech/python.png";
 import postgre from "../../../../public/projects/dark/tech/postgre.png";
@@ -42,7 +42,7 @@ const useTabStyles = makeStyles({
   },
 });
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, selectedTheme }) => {
   const classes = useTabStyles();
   const [value, setValue] = React.useState("EDMS");
   const handleChange = (event, newValue) => {
@@ -55,7 +55,7 @@ const Projects = ({ projects }) => {
     DEMAT: demat,
     EduHUB: eduhub,
     FACT: fact,
-    EDMS: jedeai,
+    EDMS: demat,
     "Teacher's Toolkit": toolkit,
     Python: python,
     PostgreSQL: postgre,
@@ -77,13 +77,24 @@ const Projects = ({ projects }) => {
   return (
     <div id="project">
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider", color: amber[50] }}>
+        <Box
+          sx={{ borderBottom: 1, borderColor: "divider" }}
+          className={"secondary-tab-" + selectedTheme}
+        >
           <TabList
             onChange={handleChange}
             textColor="inherit"
             variant="scrollable"
-            classes={{ root: classes.root, scroller: classes.scroller, flexContainer: classes.flexContainer }}
-            TabIndicatorProps={{ sx: { backgroundColor: amber[50] } }}
+            classes={{
+              root: classes.root,
+              scroller: classes.scroller,
+              flexContainer: classes.flexContainer,
+            }}
+            TabIndicatorProps={
+              selectedTheme === "dark"
+                ? { sx: { backgroundColor: amber[50] } }
+                : { sx: { backgroundColor: "#000" } }
+            }
             centered
           >
             {Array.from(projects).map((project) => {
@@ -92,7 +103,15 @@ const Projects = ({ projects }) => {
                   key={project.name}
                   label={project.name}
                   value={project.name}
-                  icon={<Avatar alt={project.name} src={vars[project.name]} />}
+                  icon={
+                    <Avatar
+                      alt={project.name}
+                      src={vars[project.name]}
+                      style={
+                        selectedTheme === "dark" ? {} : { filter: "invert(1)" }
+                      }
+                    />
+                  }
                 />
               );
             })}
@@ -103,16 +122,21 @@ const Projects = ({ projects }) => {
             <TabPanel
               key={project.name}
               value={project.name}
-              style={{ color: "#fff8e1", height: "100%", position: "relative", overflow: "auto" }}
+              style={{
+                height: "100%",
+                position: "relative",
+                overflow: "auto",
+              }}
+              className={"text-" + selectedTheme}
             >
               {project.description}
               {Array.from(project.points).map((point) => {
-                return <div style={{ color: "#fff8e1" }}>{point}</div>;
+                return <div className={"text-" + selectedTheme}>{point}</div>;
               })}
               <div
                 style={{
-                //   width: "-webkit-fill-available",
-                //   position: "absolute",
+                  //   width: "-webkit-fill-available",
+                  //   position: "absolute",
                   bottom: 22,
                 }}
               >
@@ -121,8 +145,9 @@ const Projects = ({ projects }) => {
                     textAlign: "center",
                     marginBottom: "2%",
                   }}
+                  className={"text-" + selectedTheme}
                 >
-                  <a>TECHNOLOGIES USED</a>
+                  <h4>TECHNOLOGIES USED</h4>
                 </div>
                 <ul
                   style={{
@@ -131,13 +156,13 @@ const Projects = ({ projects }) => {
                     overflow: "auto",
                     bottom: 0,
                     listStyleType: "none",
-                    flexWrap: "wrap"
+                    flexWrap: "wrap",
                   }}
                 >
                   {Array.from(project.technologies).map((tech) => {
                     return (
                       <li
-                      className="techno"
+                        className="techno"
                         style={{
                           width: 120,
                           alignItems: "center",
@@ -150,7 +175,7 @@ const Projects = ({ projects }) => {
                           src={vars[tech]}
                           style={{ height: "40px" }}
                         />
-                        <div className="">{tech}</div>
+                        <div className={"text-" + selectedTheme}>{tech}</div>
                       </li>
                     );
                   })}
