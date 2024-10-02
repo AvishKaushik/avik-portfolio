@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Professional from "./modes/professional/Professional";
+// import Professional from "./modes/professional/Professional";
 import Splash from "./modes/Splash.js";
 
 const App = () => {
-  const [selectedTheme, setSelectedTheme] = useState("dark");
+  // const [selectedTheme, setSelectedTheme] = useState("dark");
 
-  const onChangeTheme = (newValue) => {
-    document.body.className=('body-'+newValue);
-    setSelectedTheme(newValue);
-  };
+  // const onChangeTheme = (newValue) => {
+  //   document.body.className=('body-'+newValue);
+  //   setSelectedTheme(newValue);
+  // };
   return (
     <div style={{ width: "100%" }}>
       <BrowserRouter>
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/" element={<Splash />} />
           {/* <Route path="/arcade" element={<Arcade />} /> */}
           {/* <Route path="/unix" element={<Unix onChangeTheme={onChangeTheme} theme={theme}/>} /> */}
-          <Route
+          {/* <Route
             path="/professional"
             element={
               <Professional
@@ -25,7 +25,7 @@ const App = () => {
                 selectedTheme={selectedTheme}
               />
             }
-          />
+          /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

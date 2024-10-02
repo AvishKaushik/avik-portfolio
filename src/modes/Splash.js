@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Splash.css";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import LoaderLogo from "../modes/LoaderLogo.js";
+import Professional from "./professional/Professional.js";
 
 function AnimatedSplash(props) {
   return (
@@ -33,8 +34,16 @@ const Splash = () =>  {
     // Cleanup the timeout on component unmount
     return () => clearTimeout(id);
   }, []);
+
+
+  const [selectedTheme, setSelectedTheme] = useState("dark");
+
+  const onChangeTheme = (newValue) => {
+    document.body.className=('body-'+newValue);
+    setSelectedTheme(newValue);
+  };
     return redirect ? (
-      <Navigate to="/professional" />
+      <Professional onChangeTheme={onChangeTheme} selectedTheme={selectedTheme} />
     ) : (
       <AnimatedSplash theme={darkTheme} />
     );
