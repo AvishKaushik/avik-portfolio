@@ -31,7 +31,9 @@
     "build": "webpack --mode production",
     "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
