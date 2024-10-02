@@ -219,6 +219,14 @@ code {
   background-color: var(--card-dark) !important;
 }
 
+.icon-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  margin-top: 0%;
+  justify-content: center;
+}
+
 .logo-name-light {
   color: var(--text-light);
   font-family: "Agustina", sans-serif;
@@ -466,6 +474,21 @@ code {
   border-radius: 50%;
   display: inline-block;
   animation: pulsate ease 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  box-shadow: 0 0 0 4px var(--jet);
+}
+
+
+.firstPointer {
+  position: relative;
+  min-height: 7px !important;
+  width: 7px;
+  top: 4px;
+  left: 4px;
+  background: var(--text-gradient-yellow);
+  border-radius: 50%;
+  display: inline-block;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
   box-shadow: 0 0 0 4px var(--jet);

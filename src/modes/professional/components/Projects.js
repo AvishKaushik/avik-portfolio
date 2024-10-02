@@ -129,15 +129,18 @@ const Projects = ({ projects, selectedTheme }) => {
               }}
               className={"text-" + selectedTheme}
             >
-              {project.description}
-              {Array.from(project.points).map((point) => {
-                return <div className={"text-" + selectedTheme}>{point}</div>;
-              })}
+              {/* <div style={{ height: "67%", overflow: "auto" }}> */}
+                {project.description}
+                {Array.from(project.points).map((point) => {
+                  return <div className={"text-" + selectedTheme}>{point}</div>;
+                })}
+              {/* </div> */}
               <div
                 style={{
                   //   width: "-webkit-fill-available",
                   //   position: "absolute",
                   bottom: 22,
+                  overflow: "auto"
                 }}
               >
                 <div
@@ -157,6 +160,7 @@ const Projects = ({ projects, selectedTheme }) => {
                     bottom: 0,
                     listStyleType: "none",
                     flexWrap: "wrap",
+                    padding: "0",
                   }}
                 >
                   {Array.from(project.technologies).map((tech) => {

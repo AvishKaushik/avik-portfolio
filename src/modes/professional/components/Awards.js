@@ -1,6 +1,4 @@
-import { Canvas } from "@react-three/fiber";
-import React, { Suspense, useState } from "react";
-import { Environment, OrbitControls } from "@react-three/drei";
+import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import brainiac from "../../../../public/projects/dark/awards/brainiac.png";
 import leetcode from "../../../../public/projects/dark/awards/knight.png";
@@ -19,27 +17,20 @@ const Awards = ({ awards, selectedTheme }) => {
   };
 
   var vars = {
-    "brainiac": brainiac,
-    "blspecial": blspecial,
-    "spot": spot,
-    "reply": reply,
-    "hashcode": hashcode,
-    "decipher": decipher,
-    "sudoku": sudoku,
-    "leetcode": leetcode,
+    brainiac: brainiac,
+    blspecial: blspecial,
+    spot: spot,
+    reply: reply,
+    hashcode: hashcode,
+    decipher: decipher,
+    sudoku: sudoku,
+    leetcode: leetcode,
   };
 
   return (
-    <div className={"award-"+selectedTheme}>
+    <div className={"award-" + selectedTheme}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div className="front" onClick={onFlip}>
-          {/* <Canvas style={{ height: "120px" }} camera={{ position: [0, 80, 50], isPerspectiveCamera: true }}>
-            <Suspense fallback={null}>
-              <OrbitControls enableZoom={false} enableRotate={false} />
-              <Trophy />
-              <Environment preset="sunset" />
-            </Suspense>
-          </Canvas> */}
           <div
             style={{
               height: "120px",
@@ -47,13 +38,19 @@ const Awards = ({ awards, selectedTheme }) => {
               display: "flex",
             }}
           >
-            <img src={vars[awards.id]} style={{ height: awards.size, margin: "auto" }} />
+            <img
+              alt={awards.name}
+              src={vars[awards.id]}
+              style={{ height: awards.size, margin: "auto" }}
+            />
           </div>
           <div style={{ textAlign: "center" }}>{awards.name}</div>
           <div style={{ textAlign: "center" }}>{awards.organization}</div>
         </div>
         <div className="back" onClick={onFlip}>
-          OHH YESS
+          <div style={{ textAlign: "center", fontWeight: "bold" }}>{awards.flipname}</div>
+          <div class="separator"></div>
+          <div style={{ textAlign: "center" }}>{awards.description}</div>
         </div>
       </ReactCardFlip>
     </div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const Experience = ({ value, vars, selectedTheme }) => {
   return (
-    <div className="sublist">
+    <div className="sublist" style={{height: "200px"}}>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <div className={value.isCurrent === true ? "pointer" : "oldPointer"}></div>
+        <div className={value.wasLatest === true ? "firstPointer" : "oldPointer"}></div>
         <div className={!value.isLast ? "line" : "invisible"} />
       </div>
       <div
@@ -27,17 +27,18 @@ const Experience = ({ value, vars, selectedTheme }) => {
           <div className={"text-"+selectedTheme}>{value.from}-{value.to}</div>
         </div>
         <div style={{ width: "100%", boxSizing: "border-box" }}>
+          {value.imgLocation==="none"?<div></div>:
           <img
             loading="lazy"
-            alt="univeristy"
-            src={vars[value.imgLocation]}
+            alt={value.name}
+            src={vars[value.imgLocation+"-"+selectedTheme]}
             style={{
-              width: 76,
-              height: 76,
+              width: 66,
+              // height: 76,
               margin: "auto",
               float: "right",
             }}
-          />
+          />}
         </div>
       </div>
     </div>

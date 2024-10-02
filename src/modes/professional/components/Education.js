@@ -31,11 +31,11 @@ const Education = ({ value, vars, selectedTheme }) => {
         <div style={{ width: "100%", boxSizing: "border-box" }}>
           <img
             loading="lazy"
-            alt="univeristy"
-            src={vars[value.imgLocation]}
+            alt={value.name}
+            src={vars[value.imgLocation+"-"+selectedTheme]}
             style={{
-              width: 76,
-              height: 76,
+              width: 86,
+              // height: 76,
               margin: "auto",
               float: "right",
             }}

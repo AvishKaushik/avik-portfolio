@@ -6,7 +6,25 @@
         "subHeading": "",
         "size": 0,
         "type": "text",
-        "data": "Hello! I’m Avish Kaushik, a passionate and driven Software Engineer with a strong background in full-stack development and cloud technologies. Currently, I work at Societe Generale Global Solution Center, where I have had the opportunity to lead and contribute to impactful projects such as the migration of legacy systems to internal cloud platforms. I bring expertise in programming languages like Java, C++, Python, and frameworks such as ReactJS, Spring Boot, and Kubernetes. \nWith a knack for problem-solving, I enjoy translating complex business requirements into seamless technical solutions. My work involves everything from architecture analysis and development to DevOps and infra management. Along the way, I’ve been recognized with several awards for my contributions to improving application performance and streamlining processes.\nIn addition to my professional experience, I have a strong foundation in computer science, having earned my B.Tech from Vellore Institute of Technology. I thrive in fast-paced, agile environments and am always eager to learn, grow, and take on new challenges. Feel free to explore my portfolio to see some of the exciting projects I’ve worked on!"
+        "data": "Hello! I’m Avish Kaushik, a passionate and driven Software Engineer with a strong background in full-stack development and cloud technologies. Currently, I work at Societe Generale Global Solution Center, where I have had the opportunity to lead and contribute to impactful projects such as the migration of legacy systems to internal cloud platforms. I bring expertise in programming languages like Java, C++, Python, and frameworks such as ReactJS, Spring Boot, and Kubernetes. \nWith a knack for problem-solving, I enjoy translating complex business requirements into seamless technical solutions. My work involves everything from architecture analysis and development to DevOps and infra management. Along the way, I’ve been recognized with several awards for my contributions to improving application performance and streamlining processes.\nIn addition to my professional experience, I have a strong foundation in computer science, having earned my B.Tech from Vellore Institute of Technology. I thrive in fast-paced, agile environments and am always eager to learn, grow, and take on new challenges. Feel free to explore my portfolio to see some of the exciting projects I’ve worked on!",
+        "technologies": [
+          "AGGrid",
+          "Angular",
+          "Azure",
+          "DQL",
+          "Express",
+          "JAVA",
+          "Jenkins",
+          "Kubernetes",
+          "MongoDB",
+          "Node",
+          "PostgreSQL",
+          "Python",
+          "RabbitMQ",
+          "React",
+          "SonarQube",
+          "XL Deploy"
+        ]
       }
     ]
   },
@@ -71,27 +89,30 @@
             "from": "June 2022",
             "to": "July 2024",
             "designation": "Software Engineer Fullstack",
-            "imgLocation": "SCHOOL",
+            "imgLocation": "SG",
             "isLast": false,
-            "isCurrent": false
+            "isCurrent": false,
+            "wasLatest": true
           },
           {
             "name": "Societe Generale Global Solution Center",
             "from": "January 2022",
             "to": "June 2022",
             "designation": "Software Engineer Intern",
-            "imgLocation": "SCHOOL",
+            "imgLocation": "SG",
             "isLast": false,
-            "isCurrent": false
+            "isCurrent": false,
+            "wasLatest": false
           },
           {
             "name": "Kogniti",
             "from": "October 2021",
             "to": "January 2022",
             "designation": "Software Engineer Intern",
-            "imgLocation": "SCHOOL",
+            "imgLocation": "none",
             "isLast": true,
-            "isCurrent": false
+            "isCurrent": false,
+            "wasLatest": false
           }
         ]
       }
@@ -114,7 +135,14 @@
               "Additionally, I designed and implemented widgets and features to automate document management and data feeding processes, making the transition from the legacy EDMS smoother for end users. In collaboration with stakeholders, I facilitated requirements gathering sessions to produce detailed requirement documents, user stories, and use cases, ensuring that the new system aligned with business needs.",
               "To accelerate the decommissioning of the legacy system, I worked closely with client applications to build a WebService that connected the legacy codebase to the new Cloud Platform, ensuring minimal disruption during the transition."
             ],
-            "technologies": ["JAVA", "DQL", "RabbitMQ", "Jenkins", "Kubernetes"]
+            "technologies": [
+              "JAVA",
+              "DQL",
+              "RabbitMQ",
+              "Jenkins",
+              "Kubernetes",
+              "SonarQube"
+            ]
           },
           {
             "name": "Billing",
@@ -123,8 +151,7 @@
               "A central aspect of the project was the design and development of an entire architecture and utilities to support the migration from a legacy document management system to an internal Cloud Platform. This effort successfully migrated over 2 million data records with more than 20 different document types, ensuring that all critical business data—particularly invoices and contracts—were securely transferred and accessible in the cloud.",
               "To automate and optimize workflows, a new batch process was introduced, utilizing Exchange Services to read and store documents and data from mailboxes directly to the Cloud Platform. This allowed for more efficient document management while also reducing manual intervention.",
               "Another critical element was the migration from a legacy LDAP authentication system to modern OAuth2 authentication, which significantly improved the security and performance of the applications, enhancing user experience.",
-              "Additionally, the project introduced a range of widgets and automated features that allowed users to easily manage documents and streamline data feeding processes. These tools played a vital role in transitioning users from a legacy Electronic Document Management System (EDMS) to the newly developed cloud-based platform.",
-              "The applications were essential for front-end, middle office, back office, and operations teams, enabling them to efficiently validate, manipulate, and manage critical business data. Overall, the project enhanced security, performance, and automation across the organization’s document management processes."
+              "Additionally, the project introduced a range of widgets and automated features that allowed users to easily manage documents and streamline data feeding processes. These tools played a vital role in transitioning users from a legacy Electronic Document Management System (EDMS) to the newly developed cloud-based platform. The applications were essential for front-end, middle office, back office, and operations teams, enabling them to efficiently validate, manipulate, and manage critical business data. Overall, the project enhanced security, performance, and automation across the organization’s document management processes."
             ],
             "technologies": [
               "JAVA",
@@ -134,14 +161,17 @@
               "PostgreSQL",
               "Jenkins",
               "XL Deploy",
-              "Kubernetes",
-              "SonarQube"
+              "Kubernetes"
             ]
           },
           {
             "name": "FACT",
-            "description": "",
-            "points": [],
+            "description": "FACT is a powerful application designed to simplify cost tracking and budget management within organizations. It is developed using a combination of modern technologies, including Angular for a dynamic and responsive frontend, AgGrid for handling large datasets and interactive data grids, MongoDB for flexible, high-performance data storage, and Java for robust backend processing.",
+            "points": [
+              "The core functionality of FACT revolves around helping organizations track expenses in real-time, monitor budget allocations, and analyze financial performance across different departments or projects. It enables users to efficiently input, update, and visualize cost data while maintaining a clear overview of their budgets. With real-time data updates, FACT ensures that financial data remains current and accurate, reducing the risk of overspending or budget mismanagement.",
+              "The integration of AgGrid offers users powerful data manipulation features such as sorting, filtering, and editing within grid views, improving data accessibility. FACT also supports reporting and analytics, allowing users to generate detailed financial reports to aid in strategic decision-making.",
+              "This application is vital for organizations aiming to streamline their financial processes, maintain transparency, and make informed budget-related decisions, ultimately leading to improved cost control and better financial health."
+            ],
             "technologies": ["JAVA", "MongoDB", "Angular", "AGGrid"]
           },
           {
@@ -192,7 +222,8 @@
             "id": "brainiac",
             "name": "Brainiac Award",
             "organization": "Societe Generale Global Solution Center",
-            "trophy": "",
+            "flipname": "Brainiac Award",
+            "description": "Recognized for exceptional innovation and strategic contributions, making a significant impact at Societe Generale Global Solution Centre.",
             "year": 2023,
             "display": false,
             "size": "100%"
@@ -201,7 +232,8 @@
             "id": "blspecial",
             "name": "BL Special Award",
             "organization": "Societe Generale Global Solution Center",
-            "trophy": "",
+            "flipname": "BL Special Award",
+            "description": "Awarded for outstanding performance, leadership, and the ability to drive critical projects successfully at Societe Generale Global Solution Centre.",
             "year": 2023,
             "display": false,
             "size": "100%"
@@ -210,7 +242,8 @@
             "id": "spot",
             "name": "Spot Award",
             "organization": "Societe Generale Global Solution Center",
-            "trophy": "",
+            "flipname": "Spot Award",
+            "description": "Honored for quick problem-solving skills and delivering immediate results, significantly contributing to team success at Societe Generale Global Solution Centre.",
             "year": 2023,
             "display": false,
             "size": "60%"
@@ -219,7 +252,8 @@
             "id": "reply",
             "name": "Global Rank 363 | National Rank 73",
             "organization": "Reply Code Challenge",
-            "trophy": "",
+            "flipname": "Reply Code Challenge",
+            "description": "Achieved Global Rank 363 and National Rank 73 in this highly competitive global coding event, demonstrating excellent programming skills.",
             "year": 2021,
             "display": false,
             "size": "100%"
@@ -228,7 +262,8 @@
             "id": "hashcode",
             "name": "Global Rank 2282 | National Rank 495",
             "organization": "Google HashCode",
-            "trophy": "",
+            "flipname": "Google HashCode",
+            "description": "Earned International Rank 2282 and National Rank 495 in Google's challenging coding competition, showcasing problem-solving and teamwork abilities.",
             "year": 2021,
             "display": false,
             "size": "50%"
@@ -237,7 +272,8 @@
             "id": "decipher",
             "name": "International Rank 39",
             "organization": "DeCipher by IEM Kolkata",
-            "trophy": "",
+            "flipname": "DeCipher",
+            "description": "Secured International Rank 39 in this competitive cryptography and coding challenge, reflecting strong analytical and coding expertise.",
             "year": 2019,
             "display": false,
             "size": "100%"
@@ -246,7 +282,8 @@
             "id": "sudoku",
             "name": "National Rank 1",
             "organization": "Quicky Sudoku Quiz by Akash Institute",
-            "trophy": "",
+            "flipname": "Quicky Sudoku Quiz",
+            "description": "Achieved National Rank 1 in this fast-paced Sudoku quiz, showcasing exceptional logical thinking and problem-solving speed.",
             "year": 2016,
             "display": false,
             "size": "90%"
@@ -255,7 +292,8 @@
             "id": "leetcode",
             "name": "Rating 1927 | Level Knight | Top 3.92%",
             "organization": "Leetcode",
-            "trophy": "",
+            "flipname": "Leetcode",
+            "description": "With a rating of 1927 and achieving the Knight level, I rank in the top 3.92%, demonstrating strong proficiency in solving complex algorithmic problems.",
             "year": 2024,
             "display": false,
             "size": "60%"
