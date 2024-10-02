@@ -1,6 +1,6 @@
 import React from "react";
 import GWU from "../../../../public/GW-light.png";
-import GWUDark from "../../../../public/GW-Dark.png";
+import GWUDark from "../../../../public/GW-dark.png";
 import VIT from "../../../../public/vit.png";
 import VITDark from "../../../../public/vit-dark.png";
 import SCHOOL from "../../../../public/school.png";
