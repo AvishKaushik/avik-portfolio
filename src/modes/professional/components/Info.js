@@ -100,9 +100,9 @@ const Info = (props) => {
           </li>
         </ul>
         <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://leetcode.com/u/avish00/" class="social-link">
+        <ul class="content-list">
+          <li class="content-item">
+            <a href="https://leetcode.com/u/avish00/" class="content-link">
               <img
                 alt="Leetcode"
                 src={leetcode}
@@ -114,8 +114,8 @@ const Info = (props) => {
             </a>
           </li>
 
-          <li class="social-item">
-            <a href="https://discord.com/channels/avi._.k" class="social-link">
+          <li class="content-item">
+            <a href="https://discord.com/channels/avi._.k" class="content-link">
               <img
                 alt="Discord"
                 src={discord}
@@ -127,8 +127,8 @@ const Info = (props) => {
             </a>
           </li>
 
-          <li class="social-item">
-            <a href="https://github.com/AvishKaushik" class="social-link">
+          <li class="content-item">
+            <a href="https://github.com/AvishKaushik" class="content-link">
               <img
                 alt="GitHub"
                 src={github}
@@ -139,8 +139,8 @@ const Info = (props) => {
               ></img>
             </a>
           </li>
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/avish-kaushik-358757197/" class="social-link">
+          <li class="content-item">
+            <a href="https://www.linkedin.com/in/avish-kaushik-358757197/" class="content-link">
               <img
                 alt="LinkedIn"
                 src={linkedin}
@@ -151,8 +151,8 @@ const Info = (props) => {
               ></img>
             </a>
           </li>
-          <li class="social-item">
-            <a href="https://www.hackerrank.com/profile/avish_kaushik20" class="social-link">
+          <li class="content-item">
+            <a href="https://www.hackerrank.com/profile/avish_kaushik20" class="content-link">
               <img
                 alt="HackerRank"
                 src={hackerrank}
@@ -163,8 +163,8 @@ const Info = (props) => {
               ></img>
             </a>
           </li>
-          <li class="social-item">
-            <a href="https://www.codechef.com/users/avish00" class="social-link">
+          <li class="content-item">
+            <a href="https://www.codechef.com/users/avish00" class="content-link">
               <img
                 alt="CodeChef"
                 src={codechef}
@@ -175,8 +175,8 @@ const Info = (props) => {
               ></img>
             </a>
           </li>
-          <li class="social-item">
-            <a href="https://codeforces.com/profile/avish00" class="social-link">
+          <li class="content-item">
+            <a href="https://codeforces.com/profile/avish00" class="content-link">
               <img
                 alt="CodeForces"
                 src={codeforces}
